@@ -15,7 +15,7 @@ import static javax.persistence.GenerationType.IDENTITY;
 @Getter
 @Setter
 @Builder
-public class ClienteEntity {
+public class Produto {
     @Id
     @GeneratedValue(strategy = AUTO)
     private Long id;
