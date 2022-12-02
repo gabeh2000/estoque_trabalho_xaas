@@ -1,7 +1,7 @@
-package com.xaas.reserva.controllers;
+package com.xaas.reservas.controllers;
 
-import com.xaas.reserva.resources.ReservaResource;
-import com.xaas.reserva.services.ReservaService;
+import com.xaas.reservas.resources.ReservaResource;
+import com.xaas.reservas.services.ReservaService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
@@ -38,6 +38,6 @@ public class ReservaController {
 
     @PutMapping("/{id}")
     public ResponseEntity<ReservaResource> updateReserva(@RequestBody ReservaResource reservaResource, @PathVariable Long id) {
-        return ResponseEntity.ok(reservaService.updateProduto(reservaResource, id));
+        return ResponseEntity.ok(reservaService.updateReserva(reservaResource, id));
     }
 }

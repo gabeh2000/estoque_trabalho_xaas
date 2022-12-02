@@ -1,4 +1,4 @@
-package com.xaas.reserva.exceptions;
+package com.xaas.reservas.exceptions;
 
 import com.fasterxml.jackson.annotation.JsonFormat;
 import lombok.Builder;

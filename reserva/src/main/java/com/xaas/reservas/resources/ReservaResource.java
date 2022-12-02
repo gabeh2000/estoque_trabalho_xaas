@@ -1,4 +1,4 @@
-package com.xaas.reserva.resources;
+package com.xaas.reservas.resources;
 
 import lombok.*;
 

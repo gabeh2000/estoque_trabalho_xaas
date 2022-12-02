@@ -1,4 +1,4 @@
-package com.xaas.reserva.exceptions;
+package com.xaas.reservas.exceptions;
 
 public class ResourceNotFoundException extends RuntimeException{
     public ResourceNotFoundException(String message) {

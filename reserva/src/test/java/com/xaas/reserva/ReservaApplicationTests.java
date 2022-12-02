@@ -1,4 +1,4 @@
-package com.xaas.reserva;
+package com.xaas.reservas;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;

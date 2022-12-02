@@ -1,4 +1,4 @@
-package com.xaas.reserva.entities;
+package com.xaas.reservas.entities;
 
 import lombok.*;
 
@@ -16,7 +16,7 @@ import static javax.persistence.GenerationType.IDENTITY;
 @Getter
 @Setter
 @Builder
-public class ProdutoEntity {
+public class ReservaEntity {
     @Id
     @GeneratedValue(strategy = AUTO)
     private Long id;
