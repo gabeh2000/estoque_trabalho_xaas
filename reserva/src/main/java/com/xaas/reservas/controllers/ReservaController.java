@@ -20,6 +20,7 @@ public class ReservaController {
 
     @GetMapping
     public ResponseEntity<List<ReservaResource>> getAllReservas() {
+        
         return ResponseEntity.ok(reservaService.getAllReservas());
     }
 

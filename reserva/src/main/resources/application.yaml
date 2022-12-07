@@ -22,4 +22,4 @@ spring:
       continue-on-error: false
 
 server:
-  port: 9191
+  port: 9192

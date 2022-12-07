@@ -1,0 +1,20 @@
+[
+    {
+        "id": 1,
+        "produto": "bala juquinha",
+        "limite": 500,
+        "qtd_reservada": 3000
+    },
+    {
+        "id": 2,
+        "produto": "farinha",
+        "limite": 25,
+        "qtd_reservada": 100
+    },
+    {
+        "id": 3,
+        "produto": "coca",
+        "limite": 10,
+        "qtd_reservada": 100
+    }
+]

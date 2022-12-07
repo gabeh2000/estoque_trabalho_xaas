@@ -11,6 +11,7 @@ public final class ReservaMapper {
                 .id(reservaEntity.getId())
                 .produto(reservaEntity.getProduto())
                 .limite(reservaEntity.getLimite())
+                .qtd_reservada(reservaEntity.getQtd_reservada())
                 .build();
     }
 
@@ -20,6 +21,7 @@ public final class ReservaMapper {
                 .id(reservaResource.getId())
                 .produto(reservaResource.getProduto())
                 .limite(reservaResource.getLimite())
+                .qtd_reservada(reservaResource.getQtd_reservada())
                 .build();
     }
 }

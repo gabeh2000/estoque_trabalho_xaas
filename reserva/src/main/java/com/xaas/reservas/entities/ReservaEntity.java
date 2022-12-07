@@ -22,4 +22,5 @@ public class ReservaEntity {
     private Long id;
     private String produto;
     private int limite;
+    private int qtd_reservada;
 }
