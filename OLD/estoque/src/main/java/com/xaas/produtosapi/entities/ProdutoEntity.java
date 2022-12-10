@@ -4,10 +4,12 @@ import lombok.*;
 
 import javax.persistence.*;
 
+//import org.springframework.data.annotation.Id;
 import static javax.persistence.CascadeType.ALL;
 import static javax.persistence.GenerationType.SEQUENCE;
 import static javax.persistence.GenerationType.AUTO;
 import static javax.persistence.GenerationType.IDENTITY;
+import org.springframework.data.mongodb.core.mapping.Document;
 
 @Entity
 @Table(name = "produto")
@@ -16,6 +18,7 @@ import static javax.persistence.GenerationType.IDENTITY;
 @Getter
 @Setter
 @Builder
+@Document
 public class ProdutoEntity {
     @Id
     @GeneratedValue(strategy = AUTO)

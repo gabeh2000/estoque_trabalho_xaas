@@ -1,10 +1,10 @@
-package com.xaas.reserva;
+package com.xaas.estoque;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 
 @SpringBootTest
-class ReservaApplicationTests {
+class EstoqueApplicationTests {
 
 	@Test
 	void contextLoads() {
