@@ -42,8 +42,8 @@ public class ProdutoService {
         //get the existing document from DB
         // populate new value from request to existing object/entity/document
         Produto existingProduto = repository.findById(produtoRequest.getProdutoId()).get();
-        existingProduto.setQtd(produtoRequest.getQtd());
         existingProduto.setNome(produtoRequest.getNome());
+        existingProduto.setQtd(produtoRequest.getQtd());
         existingProduto.setPreco(produtoRequest.getPreco());
         return repository.save(existingProduto);
     }

@@ -1,9 +1,9 @@
 
 
-spring:
-  data:
-    mongodb:
-      uri : mongodb+srv://root:root@cluster0.wrc5ilu.mongodb.net/?retryWrites=true&w=majority
-      database : Estoque
+# spring:
+#   data:
+#     mongodb:
+#       uri : mongodb+srv://root:root@cluster0.wrc5ilu.mongodb.net/?retryWrites=true&w=majority
+#       database : Estoque
 server:
   port: 9193
