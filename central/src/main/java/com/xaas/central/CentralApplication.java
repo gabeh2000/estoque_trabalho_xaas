@@ -22,14 +22,14 @@ public class CentralApplication {
 
 	public static void main(String[] args) throws IOException{
 		SpringApplication.run(CentralApplication.class, args);
-		verificaMudança();
+		//verificaMudança();
 		//System.out.println(getCoisas("http://localhost:9191/produtos/"));
 	}
 	
-	public static String putCoisas(String[] novoProd) throws IOException{
+	/* public static String putCoisas(String[] novoProd) throws IOException{
 		String putUrl = "http://localhost:9191/produtos/";
 		/*String[] aux = novoProd[0].split(":");
-		aux[1] = aux[1].replace("\"","");*/
+		aux[1] = aux[1].replace("\"","");
 		HttpPut httpPut = new HttpPut(putUrl);
 
 		httpPut.setHeader("Accept", "application/json");
@@ -135,5 +135,5 @@ public class CentralApplication {
 				}
 			}
 		}
-	}
+	}*/
 }

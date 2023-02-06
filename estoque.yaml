@@ -1,0 +1,19 @@
+apiVersion: v1
+kind: Deployment
+metadata:
+  name: estoque
+spec:
+  containers:
+  - name: estoque
+    image: estoque_img
+    ports:
+    - containerPort: 9191
+    env:
+    - name: spring_rabbitmq_host
+    value: rabbitmq
+    - name: spring_rabbitmq_port
+    value: 5672
+    - name: spring_rabbitmq_username
+    value: guest
+    - name: spring_rabbitmq_password
+    value: guest

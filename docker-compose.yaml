@@ -1,0 +1,62 @@
+version: "3"
+services:
+    rabbitmq:
+        image: rabbitmq:3-management-alpine
+        container_name: 'rabbitmq'
+        environment:
+            - HOSTNAMERABBIT=rabbitmq
+            - RABBITMQ_DEFAULT_USER=guest
+            - RABBITMQ_DEFAULT_PASS=guest
+
+        ports:
+            - 5672:5672
+            - 15672:15672
+            - 25672:25672
+        
+
+    service-1:
+        image: estoque_img
+        restart: on-failure
+        #network_mode: host
+        depends_on:
+            - rabbitmq
+        links: 
+            - rabbitmq
+        ports:
+            - 9191:9191
+        environment:
+            - spring_rabbitmq_host=rabbitmq
+            - spring_rabbitmq_port=5672
+            - spring_rabbitmq_username=guest
+            - spring_rabbitmq_password=guest
+        container_name: "estoque"
+        
+        
+        
+    service-2:
+        container_name: "reserva"
+        #network_mode: host
+        image: reserva_img
+        ports:
+            - 9192:9192
+        
+    service-3:
+        image: central_img
+        #network_mode: host
+        restart: on-failure
+        ports:
+            - 9193:9193
+        depends_on:
+            - rabbitmq
+        links: 
+            - rabbitmq
+            - service-1
+            - service-2
+        environment:
+            - spring_rabbitmq_host=rabbitmq
+            - spring_rabbitmq_port=5672
+            - spring_rabbitmq_username=guest
+            - spring_rabbitmq_password=guest
+        container_name: "central"
+        
+        

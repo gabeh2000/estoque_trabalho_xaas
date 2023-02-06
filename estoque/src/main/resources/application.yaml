@@ -3,5 +3,11 @@ spring:
     mongodb:
       uri : mongodb+srv://root:root@cluster0.wrc5ilu.mongodb.net/?retryWrites=true&w=majority
       database : Estoque
+  rabbitmq:
+    host: localhost
+    port: 5672
+    username: guest
+    password: guest
+
 server:
   port: 9191

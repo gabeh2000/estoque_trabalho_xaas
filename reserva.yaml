@@ -1,0 +1,10 @@
+apiVersion: v1
+kind: Deployment
+metadata:
+  name: reserva
+spec:
+  containers:
+  - name: reserva
+    image: reserva_img
+    ports:
+    - containerPort: 9192
