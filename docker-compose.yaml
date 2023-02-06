@@ -58,5 +58,23 @@ services:
             - spring_rabbitmq_username=guest
             - spring_rabbitmq_password=guest
         container_name: "central"
-        
+    service-4:
+        image: central_img
+        #network_mode: host
+        restart: on-failure
+        ports:
+            - 9194:9194
+        depends_on:
+            - rabbitmq
+        links: 
+            - rabbitmq
+            - service-1
+            - service-2
+        environment:
+            - spring_rabbitmq_host=rabbitmq
+            - spring_rabbitmq_port=5672
+            - spring_rabbitmq_username=guest
+            - spring_rabbitmq_password=guest
+        container_name: "central2"
+                
         

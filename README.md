@@ -9,6 +9,9 @@ Agora é executar o estoque e a reserva. Pra adicionar produtos e reservas é at
 
 Por fim execute o central. Ele fica rodando e verificando se um produto está com pouco estoque(baseado no valor limite da reserva) e aumenta(ou "compra") as unidades do protudo caso necessário. Infelizmente o registro das compras ainda não foi implementado por conta de algumas difiuldades.
 
+## Update
+Agora para a parte 2 é só rodar o docker compose, tu tendo as imagens corretas(que estão no dockerhub). Pra rodar no docker é necessário utilizar a imagem central_img, não a central_img_kub.
+
 # Os jsons
 
 Aqui temos alguns exemplos dos jsons pra cada uma das apis
